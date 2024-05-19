@@ -32,19 +32,20 @@ axes:
     max_rate_mm_per_min: 4000.000
     acceleration_mm_per_sec2: 400.000
     soft_limits: true
+    max_travel_mm: 750.000
     homing:
       cycle: 0
       positive_direction: false
       mpos_mm: 0.000
     # X  
-    motor0:
+    motor1:
       hard_limits: false
       stepstick:
         step_pin: I2SO.1
         direction_pin: I2SO.2:low
         disable_pin: I2SO.0
     # A
-    motor1:
+    motor0:
       hard_limits: false
       stepstick:
         step_pin: I2SO.10
@@ -55,6 +56,7 @@ axes:
     max_rate_mm_per_min: 4000.000
     acceleration_mm_per_sec2: 400.000
     soft_limits: true
+    max_travel_mm: 750.000
     homing:
       cycle: 0
       positive_direction: false
@@ -85,13 +87,13 @@ i2so:
   data_pin: gpio.27
   ws_pin: gpio.26
 
-sdcard:
-  cs_pin: gpio.5
-  card_detect_pin: NO_PIN
+#sdcard:
+#  cs_pin: gpio.5
+#  card_detect_pin: NO_PIN
 
-coolant:
-  flood_pin: NO_PIN
-  mist_pin:  NO_PIN
+#coolant:
+#  flood_pin: NO_PIN
+#  mist_pin:  NO_PIN
         
 # Control pen up/down using a servo that is configured to look like a spindle 
 # A cheap blue 9g chinese servo was used. 
@@ -101,15 +103,15 @@ coolant:
 # M3 S0  is pen up from paper
 # M3 S255 is pen down on paper
 # If you need to invert motion of servo, invert the values for min_pulse_us and max_pulse_us
-besc:
-  output_pin: gpio.2
-  enable_pin: NO_PIN
-  direction_pin: NO_PIN
-  disable_with_s0: false
-  s0_with_disable: true
-  tool_num: 100
-  speed_map: 0=0.000% 255=100.000%
-  min_pulse_us: 700
-  max_pulse_us: 2200
+#besc:
+#  output_pin: gpio.2
+#  enable_pin: NO_PIN
+#  direction_pin: NO_PIN
+#  disable_with_s0: false
+#  s0_with_disable: true
+#  tool_num: 100
+#  speed_map: 0=0.000% 255=100.000%
+#  min_pulse_us: 700
+#  max_pulse_us: 2200
 
 
